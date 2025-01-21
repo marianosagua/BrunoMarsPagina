@@ -1,0 +1,945 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Segoe UI"; }
+
+li {
+  list-style: none; }
+
+.navegacionCentrar {
+  display: flex;
+  justify-content: center; }
+
+.navbar {
+  background-color: #525151;
+  box-shadow: 2px 9px 17px -2px rgba(0, 0, 0, 0.52);
+  -webkit-box-shadow: 2px 9px 17px -2px rgba(0, 0, 0, 0.52);
+  -moz-box-shadow: 2px 9px 17px -2px rgba(0, 0, 0, 0.52); }
+
+.navbar button {
+  border: none; }
+
+.navbar-brand {
+  display: flex;
+  justify-content: center; }
+
+.dropdown-menu {
+  background-color: #525151;
+  box-shadow: -3px 0px 40px 4px rgba(0, 0, 0, 0.67);
+  -webkit-box-shadow: -3px 0px 40px 4px rgba(0, 0, 0, 0.67);
+  -moz-box-shadow: -3px 0px 40px 4px rgba(0, 0, 0, 0.67);
+  border: none; }
+
+.dropdown-item {
+  color: white; }
+  .dropdown-item:hover {
+    color: black; }
+
+.nav-item {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: bold; }
+
+.navbar-toggler-icon {
+  color: white; }
+
+.imagenPrincipalIndex {
+  padding: 0; }
+
+.main__partePrincipal {
+  padding-right: 0;
+  background-image: linear-gradient(115deg, #ffdadf 0, #ffdada 6.25%, #ffdbd5 12.5%, #ffdcd1 18.75%, #ffddcd 25%, #ffdec9 31.25%, #ffe0c6 37.5%, #ffe1c4 43.75%, #ffe3c2 50%, #fae5c1 56.25%, #f5e6c1 62.5%, #f0e8c1 68.75%, #eaeac2 75%, #e4ebc4 81.25%, #deedc7 87.5%, #d8eeca 93.75%, #d3efce 100%); }
+
+.ultimaMusica {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  height: 1000px; }
+
+.ultimoAlbumCancion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.imagenUltimoAlbum {
+  display: flex;
+  justify-content: center; }
+
+.ultimaMusica__titulos {
+  padding-top: 20px;
+  padding-bottom: 15px; }
+
+.ultimaMusica__titulos--fecha {
+  color: #1f1f1e;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 600; }
+
+.ultimaMusica__titulos--nombre {
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 28px;
+  text-transform: uppercase;
+  padding-top: 10px; }
+
+.ultimaMusica__links--VerTodos {
+  display: inline-block;
+  border: solid 1px black;
+  color: #1f1f1e;
+  padding: 5px 10px;
+  margin-top: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px; }
+  .ultimaMusica__links--VerTodos:hover {
+    transition: 1s;
+    background-color: black;
+    color: white; }
+
+.ultimaMusica__links--Reproducir {
+  display: block;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: black;
+  font-weight: bold;
+  text-decoration: underline; }
+  .ultimaMusica__links--Reproducir:hover {
+    color: black; }
+
+.albumAnimado--Index {
+  position: relative;
+  width: 426px;
+  height: 427px;
+  perspective: 1000px; }
+  .albumAnimado--Index:hover .front--Index {
+    transform: rotateY(-180deg); }
+  .albumAnimado--Index:hover .back--Index {
+    transform: rotateY(0deg); }
+
+.card--Index {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  color: white;
+  backface-visibility: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  transition: 1s cubic-bezier(0.4, 0.2, 0.2, 1); }
+
+.front--Index {
+  transform: rotateY(0deg); }
+
+.back--Index {
+  background: #e39d61;
+  transform: rotateY(180deg); }
+  .back--Index h3 {
+    margin: 0;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #723629;
+    font-style: italic; }
+
+.boton__principal, .boton__principal--reproducir {
+  padding: 15px 25px;
+  border: unset;
+  margin: 20px;
+  border-radius: 15px;
+  color: #212121;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 1000;
+  font-size: 17px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden; }
+  .boton__principal::before, .boton__principal--reproducir::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #e6a467;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms; }
+  .boton__principal:hover, .boton__principal--reproducir:hover {
+    color: #e8e8e8; }
+    .boton__principal:hover::before, .boton__principal--reproducir:hover::before {
+      width: 100%; }
+
+.boton__principal a, .boton__principal--reproducir a {
+  text-decoration: none;
+  color: #e6a467; }
+
+.boton__principal:hover a, .boton__principal--reproducir:hover a {
+  color: white; }
+
+.proximosShows {
+  height: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 200px; }
+
+.proximosShowsGeneral {
+  display: block;
+  text-align: center;
+  width: 700px; }
+
+.shows__titulo {
+  margin-bottom: 80px;
+  margin-top: 0; }
+
+.shows__titulo--item {
+  display: inline-block;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 0;
+  padding-bottom: 5px;
+  background-color: #e6a467;
+  font-size: 30px;
+  font-style: italic;
+  letter-spacing: 10px;
+  color: white;
+  text-align: center;
+  margin-bottom: 0; }
+
+.shows__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px 0; }
+
+.shows__fechas--item {
+  padding-top: 10px;
+  padding-bottom: 25px;
+  padding-right: 25px;
+  padding-left: 25px;
+  background-color: #e6a467;
+  text-align: center;
+  font-style: italic;
+  color: white;
+  display: inline-block;
+  margin-bottom: 0;
+  width: 90px; }
+  .shows__fechas--item span {
+    display: block;
+    font-size: 30px;
+    line-height: 20px; }
+
+.shows__ciudad--item {
+  letter-spacing: 1px;
+  font-style: italic;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+  text-align: center; }
+
+.shows__tickets--item {
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px; }
+  .shows__tickets--item a {
+    text-decoration: none;
+    font-style: italic;
+    color: #e6a467; }
+
+.proximosShows__links--VerTodos {
+  display: inline-block;
+  border: solid 1px black;
+  color: #1f1f1e;
+  padding: 5px 10px;
+  margin-top: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px; }
+  .proximosShows__links--VerTodos:hover {
+    transition: 1s;
+    background-color: black;
+    color: white; }
+
+.footer {
+  background-color: black; }
+
+.contenedor__footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  line-height: 60px; }
+
+.footer__iconos {
+  margin-right: 20px; }
+
+.footer__iconos--item {
+  display: inline-block;
+  margin: 0 5px; }
+
+.footer__titulo--item {
+  display: inline-block;
+  color: white;
+  font-size: 17px;
+  text-transform: uppercase;
+  margin: 0 20px; }
+
+.albumesGeneral {
+  display: flex;
+  justify-content: center; }
+
+.singlesGeneral {
+  display: flex;
+  justify-content: center; }
+
+.musica__tituloGeneral {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-style: italic; }
+
+.contenedor {
+  padding: 100px 0;
+  background-image: linear-gradient(115deg, #ffdadf 0, #ffdada 6.25%, #ffdbd5 12.5%, #ffdcd1 18.75%, #ffddcd 25%, #ffdec9 31.25%, #ffe0c6 37.5%, #ffe1c4 43.75%, #ffe3c2 50%, #fae5c1 56.25%, #f5e6c1 62.5%, #f0e8c1 68.75%, #eaeac2 75%, #e4ebc4 81.25%, #deedc7 87.5%, #d8eeca 93.75%, #d3efce 100%); }
+
+.musica__albums {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 70px;
+  margin-top: 30px;
+  margin-bottom: 100px; }
+
+.albumEspecifico {
+  text-align: center; }
+  .albumEspecifico img {
+    width: 320px;
+    height: 320px; }
+
+.albumEspecifico__titulo {
+  padding: 20px 0;
+  font-size: 22px; }
+
+.musica__singles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 70px;
+  margin-top: 30px;
+  margin-bottom: 180px;
+  row-gap: 50px; }
+
+.albumAnimado {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  perspective: 1000px; }
+  .albumAnimado:hover .front {
+    transform: rotateY(-180deg); }
+  .albumAnimado:hover .back {
+    transform: rotateY(0deg); }
+
+.card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  border-radius: 0;
+  border: none;
+  color: white;
+  backface-visibility: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  transition: 1s cubic-bezier(0.4, 0.2, 0.2, 1); }
+
+.front {
+  transform: rotateY(0deg); }
+
+.back--Uno {
+  background: #f9b91d;
+  transform: rotateY(180deg); }
+  .back--Uno h3 {
+    margin: 0;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: "Segoe UI";
+    color: #fceec5;
+    font-style: italic; }
+
+.back--Dos {
+  background: #dccfbd;
+  transform: rotateY(180deg); }
+  .back--Dos h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: "Segoe UI";
+    color: black;
+    font-style: italic; }
+
+.back--Tres {
+  background: #f0f0f0;
+  transform: rotateY(180deg); }
+  .back--Tres h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: "Segoe UI";
+    color: black;
+    font-style: italic; }
+
+.back--cuatro {
+  background: #e39d61;
+  transform: rotateY(180deg); }
+  .back--cuatro h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: "Segoe UI";
+    color: #723629;
+    font-style: italic; }
+
+.boton__principal--reproducir {
+  background-color: black; }
+  .boton__principal--reproducir a {
+    color: white; }
+  .boton__principal--reproducir:hover a {
+    color: black; }
+  .boton__principal--reproducir::before {
+    background-color: white; }
+
+.main__tour {
+  background-color: white; }
+
+.imagenPrincipalTour {
+  padding: 0; }
+
+.proximosShows__tour {
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(115deg, #ffdadf 0, #ffdada 6.25%, #ffdbd5 12.5%, #ffdcd1 18.75%, #ffddcd 25%, #ffdec9 31.25%, #ffe0c6 37.5%, #ffe1c4 43.75%, #ffe3c2 50%, #fae5c1 56.25%, #f5e6c1 62.5%, #f0e8c1 68.75%, #eaeac2 75%, #e4ebc4 81.25%, #deedc7 87.5%, #d8eeca 93.75%, #d3efce 100%);
+  align-items: center;
+  padding: 100px; }
+
+.proximosShowsGeneral--tour {
+  display: block;
+  text-align: center;
+  width: 1200px; }
+
+.shows__tickets--item--tour {
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px; }
+  .shows__tickets--item--tour a {
+    text-decoration: none;
+    font-style: italic;
+    color: #e6a467; }
+
+.main__biografia {
+  background-image: linear-gradient(115deg, #ffdadf 0, #ffdada 6.25%, #ffdbd5 12.5%, #ffdcd1 18.75%, #ffddcd 25%, #ffdec9 31.25%, #ffe0c6 37.5%, #ffe1c4 43.75%, #ffe3c2 50%, #fae5c1 56.25%, #f5e6c1 62.5%, #f0e8c1 68.75%, #eaeac2 75%, #e4ebc4 81.25%, #deedc7 87.5%, #d8eeca 93.75%, #d3efce 100%); }
+
+.biografia {
+  margin-top: 50px;
+  margin-bottom: 80px;
+  margin-left: 0;
+  margin-right: 0; }
+
+.biografia__imagenes {
+  display: flex;
+  justify-content: center; }
+
+.biografia__titulo {
+  display: block;
+  text-align: center;
+  margin: 40px 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black; }
+
+.biografia-texto {
+  display: flex;
+  justify-content: center;
+  margin: 0 100px; }
+
+.biografia__parrafo {
+  text-align: justify;
+  font-size: 20px;
+  color: black;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-bottom: 0; }
+
+.main {
+  background-image: linear-gradient(115deg, #ffdadf 0, #ffdada 6.25%, #ffdbd5 12.5%, #ffdcd1 18.75%, #ffddcd 25%, #ffdec9 31.25%, #ffe0c6 37.5%, #ffe1c4 43.75%, #ffe3c2 50%, #fae5c1 56.25%, #f5e6c1 62.5%, #f0e8c1 68.75%, #eaeac2 75%, #e4ebc4 81.25%, #deedc7 87.5%, #d8eeca 93.75%, #d3efce 100%); }
+
+#fotos {
+  padding-bottom: 100px; }
+
+.galeria__titulo {
+  text-align: center;
+  margin: 40px 0;
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-style: italic; }
+
+.galeria__fotos {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0; }
+
+.fotos__item {
+  transition: transform 0.5s; }
+  .fotos__item:hover {
+    transform: scale(1.5); }
+
+#videos {
+  padding: 0; }
+
+.contenedor-videoGeneral {
+  background-color: #eeeeee; }
+
+.container {
+  padding: 0; }
+
+.videoGeneral {
+  display: flex;
+  justify-content: center;
+  padding: 80px 10px; }
+
+.videoGeneral__titulos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  margin-left: 20px; }
+
+.videoGeneral__fecha {
+  text-transform: uppercase;
+  color: black;
+  font-weight: 400;
+  font-size: 22px; }
+
+.videoGeneral__nombre {
+  font-weight: bold;
+  font-size: 30px; }
+
+.contenedor-videoParticular {
+  margin: 40px 0; }
+
+.videoParticular__Alinear {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 20px; }
+
+.videoParticular__item {
+  display: flex;
+  justify-content: center;
+  cursor: pointer; }
+  .videoParticular__item img {
+    width: 300px;
+    height: 171px; }
+
+.videoFondo {
+  width: 300px;
+  height: 171px; }
+  .videoFondo:hover .videoFondo_titulosKeloke {
+    display: flex;
+    transition: 5s; }
+
+.fondoUno {
+  width: 300px;
+  height: 171px;
+  background-image: url("/images/Videos Skate.jpg");
+  background-size: cover; }
+
+.fondoDos {
+  width: 300px;
+  height: 171px;
+  background-image: url("/images/Videos Leave the door open.jpg");
+  background-size: cover; }
+
+.fondoTres {
+  width: 300px;
+  height: 171px;
+  background-image: url("/images/Videos Finesse.webp");
+  background-size: cover; }
+
+.fondoCuatro {
+  width: 300px;
+  height: 171px;
+  background-image: url("/images/Videos 24k Magic.jpg");
+  background-size: cover; }
+
+.fondoCinco {
+  width: 300px;
+  height: 171px;
+  background-image: url("/images/Videos Thats What I Like.jpg");
+  background-size: cover; }
+
+.fondoSeis {
+  width: 300px;
+  height: 171px;
+  background-image: url("/images/Videos Versace on the floor.jpg");
+  background-size: cover; }
+
+.fondoSiete {
+  width: 300px;
+  height: 171px;
+  background-image: url("/images/Videos Uptown Funk.jpg");
+  background-size: cover; }
+
+.fondoOcho {
+  width: 300px;
+  height: 171px;
+  background-image: url("/images/Videos Locked Out Of Heaven.jpg");
+  background-size: cover; }
+
+.fondoNueve {
+  width: 300px;
+  height: 171px;
+  background-image: url("/images/Videos Treasure.jpg");
+  background-size: cover; }
+
+.fondoDiez {
+  width: 300px;
+  height: 171px;
+  background-image: url("/images/Videos When i was your men.jpg");
+  background-size: cover; }
+
+.fondoOnce {
+  width: 300px;
+  height: 171px;
+  background-image: url("/images/Videos The Lazy Song.jpg");
+  background-size: cover; }
+
+.fondoDoce {
+  width: 300px;
+  height: 171px;
+  background-image: url("/images/Videos Just The Way you are.jpg");
+  background-size: cover; }
+
+.videoFondo_titulosKeloke {
+  width: 300px;
+  height: 171px;
+  background-color: black;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: .8; }
+  .videoFondo_titulosKeloke h4 {
+    display: inline-block;
+    margin: 10px 0; }
+
+.videoFondo__titulo {
+  color: white;
+  font-weight: bold;
+  font-size: 15px; }
+
+.botonVideos {
+  padding: 15px 25px;
+  border: solid 1px black;
+  border-radius: 15px;
+  color: #212121;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 1000;
+  font-size: 17px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden; }
+  .botonVideos::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms; }
+  .botonVideos:hover {
+    color: #e8e8e8; }
+    .botonVideos:hover::before {
+      width: 100%; }
+
+.mainGeneralContacto {
+  justify-content: center;
+  background-image: linear-gradient(115deg, #ffdadf 0, #ffdada 6.25%, #ffdbd5 12.5%, #ffdcd1 18.75%, #ffddcd 25%, #ffdec9 31.25%, #ffe0c6 37.5%, #ffe1c4 43.75%, #ffe3c2 50%, #fae5c1 56.25%, #f5e6c1 62.5%, #f0e8c1 68.75%, #eaeac2 75%, #e4ebc4 81.25%, #deedc7 87.5%, #d8eeca 93.75%, #d3efce 100%);
+  height: 1000px; }
+
+.formularioGeneral {
+  margin: 150px 100px;
+  border: solid 0px black;
+  border-radius: 10px;
+  padding: 50px 0px;
+  background-color: white;
+  box-shadow: 3px 3px 62px 6px rgba(0, 0, 0, 0.37);
+  -webkit-box-shadow: 3px 3px 62px 6px rgba(0, 0, 0, 0.37);
+  -moz-box-shadow: 3px 3px 62px 6px rgba(0, 0, 0, 0.37); }
+
+.formulario_keloke {
+  display: flex;
+  justify-content: center; }
+
+.formularioEdicion {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 20px; }
+
+.formulario__mensaje {
+  grid-column: 1/3;
+  grid-row: 2/3; }
+
+.formulario__tituloUno {
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 25px;
+  letter-spacing: 15px;
+  font-style: italic;
+  color: #e6a467; }
+
+.formulario__tituloDos {
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  font-size: 15px;
+  font-style: italic;
+  opacity: .5;
+  word-spacing: 5px; }
+
+.form-control {
+  border: none;
+  border-radius: 15px;
+  padding: 15px;
+  background-color: #e8e8e8;
+  box-shadow: 6px 6px 12px #ffffff, -6px -6px 12px #c5c5c5;
+  font-size: medium;
+  font-weight: bold;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+  .form-control:focus {
+    outline-color: white;
+    place-content: "Enter your message!"; }
+
+.form-label {
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  opacity: .5;
+  color: #e6a467; }
+
+.boton {
+  display: flex;
+  justify-content: center; }
+
+.boton__item {
+  margin: 50px 0;
+  padding: 1.3em 3em;
+  font-size: 15px;
+  letter-spacing: 2.5px;
+  font-weight: bold;
+  font-style: italic;
+  text-transform: uppercase;
+  color: grey;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none; }
+  .boton__item:hover {
+    background-color: #e6a467;
+    box-shadow: 0px 15px 20px #e6a467;
+    color: #fff;
+    transform: translateY(-7px); }
+  .boton__item:active {
+    transform: translateY(-1px); }
+
+@media (max-width: 1450px) {
+  .proximosShows {
+    padding-right: 100px; }
+  .musica__albums {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr); }
+  .musica__singles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr); }
+  .albumEspecifico {
+    text-align: center; }
+  .imagenes--item {
+    height: 500px; }
+  .videoParticular__Alinear {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr); } }
+
+@media (max-width: 1100px) {
+  .videoGeneral {
+    flex-direction: column;
+    padding: 40px 0; }
+  .videoGeneral-item {
+    margin: 0; }
+  .footer {
+    text-align: center; }
+  .footer__iconos {
+    margin-right: 0; }
+  .contenedor__footer {
+    display: flex;
+    flex-direction: column; } }
+
+@media (max-width: 1000px) {
+  .videoParticular__Alinear {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr); }
+  .videoGeneral__titulos {
+    align-items: center;
+    margin: 10px; } }
+
+@media (max-width: 992px) {
+  .proximosShows {
+    padding-right: 10px; }
+  .ultimaMusica {
+    height: 700px; }
+  .proximosShows {
+    height: 700px; }
+  .navegacionCentrar {
+    margin-top: 5px;
+    justify-content: left; }
+  .navbar-brand {
+    justify-content: left;
+    margin-right: 0; }
+  .navPrincipal {
+    padding: 0 20px; }
+  .ultimaMusica {
+    width: 100%; }
+  .proximosShows {
+    width: 100%; }
+  .imagenes--item {
+    height: 300px; }
+  .fotos__item {
+    transition: none; }
+    .fotos__item:hover {
+      transform: none; } }
+
+@media (max-width: 750px) {
+  .biografia__parrafo {
+    margin: 0 20px; }
+  .musica__albums {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr; }
+  .musica__singles {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr; }
+  .albumEspecifico {
+    text-align: center; }
+  .formularioEdicion {
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 0; }
+  .formulario__mensaje {
+    grid-column: 1/3;
+    grid-row: 3/4; }
+  .formulario__email {
+    grid-column: 1/3;
+    grid-row: 1/2; }
+  .formulario__nombre {
+    grid-column: 1/3;
+    grid-row: 2/3; }
+  .biografia-texto {
+    margin: 0 15px; }
+  .videoParticular__Alinear {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr; }
+  .videoGeneral__fecha {
+    font-size: 15px; }
+  .videoGeneral__nombre {
+    font-weight: bold;
+    font-size: 15px; }
+  .proximosShows__tour {
+    padding: 20px; } }
+
+@media (max-width: 540px) {
+  .navbar-brand img {
+    width: 250px;
+    height: 40px; }
+  .ultimaMusica__imagen {
+    height: 334px;
+    width: 334px; }
+  .ultimaMusica__titulos--nombre {
+    font-size: 20px; }
+  .shows__titulo--item {
+    font-size: 22px; }
+  .shows__item {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px; }
+  .shows__ciudad--item {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    width: 300px; }
+  .proximosShows {
+    height: 1200px; }
+  .proximosShows__tour {
+    height: 2000px; }
+  .imagenes--item {
+    height: 350px;
+    margin-bottom: 20px; }
+  .albumAnimado--Index {
+    width: 330px;
+    height: 330px; }
+    .albumAnimado--Index img {
+      width: 330px;
+      height: 330px; }
+  .back--Index h3 {
+    font-size: 20px; }
+  .formularioGeneral {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .biografia__parrafo {
+    text-align: justify;
+    font-size: 15px;
+    margin: 0; }
+  .biografia__parrafo {
+    text-align: left;
+    font-size: 17px; }
+  .formularioGeneral {
+    margin: 50px; }
+  .form-control {
+    font-size: small; }
+  .footer__titulo--item {
+    font-size: 14px; } }

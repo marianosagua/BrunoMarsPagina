@@ -1,0 +1,297 @@
+@import "utilities/variables.scss";
+@import "utilities/mixins.scss";
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body{
+ 	font-family: $fuente-principal;
+}
+
+li {
+	list-style: none;
+}
+
+
+@import "layout/header";
+
+.imagenPrincipalIndex {
+	padding: 0;
+}
+
+.main__partePrincipal{
+	padding-right: 0;
+	background-image: $fondo-degradado;
+}
+
+.ultimaMusica {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	height: 1000px;
+}
+
+.ultimoAlbumCancion {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.imagenUltimoAlbum {
+	display: flex;
+	justify-content: center;
+}
+
+.ultimaMusica__titulos {
+	padding-top: 20px;
+	padding-bottom: 15px;
+}
+
+.ultimaMusica__titulos--fecha {
+	color: #1f1f1e;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	font-weight: 600;
+}
+
+.ultimaMusica__titulos--nombre {
+	display: inline-block;
+	font-family: 'Roboto', sans-serif;
+	font-size: 28px;
+	text-transform: uppercase;
+	padding-top: 10px;
+}
+
+.ultimaMusica__links--VerTodos {
+	display: inline-block;
+	border: solid 1px black;
+	color: #1f1f1e;
+	padding: 5px 10px;
+	margin-top: 30px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 12px;
+	&:hover {
+		transition: 1s;
+		background-color: black;
+		color: white;
+	}
+}
+
+.ultimaMusica__links--Reproducir {
+	display: block;
+	text-transform: uppercase;
+	font-size: 14px;
+	color: black;
+	font-weight: bold;
+	text-decoration: underline;
+	&:hover {
+		color: black;
+	}
+}
+
+.albumAnimado--Index{
+	position: relative;
+	width: 426px;
+	height: 427px;
+	perspective: 1000px;
+	&:hover {
+		.front--Index {
+			transform: rotateY(-180deg);
+		}
+		.back--Index{
+			transform: rotateY(0deg);
+		}
+	}
+}
+.card--Index{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: grid;
+	place-items: center;
+	color: white;
+	backface-visibility: hidden;
+	font-family: Arial, Helvetica, sans-serif;
+	transform: rotateY(0deg);
+	transform-style: preserve-3d;
+	transition: 1s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+.front--Index{
+	transform: rotateY(0deg);
+}
+.back--Index{
+	background: #e39d61;
+	transform: rotateY(180deg);
+	h3 {
+		margin: 0;
+		font-size: 25px;
+		font-weight: bold;
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		color: #723629;
+		font-style: italic;
+	}
+}
+
+.boton__principal{
+	padding: 15px 25px;
+	border: unset;
+	margin: 20px;
+	border-radius: 15px;
+	color: #212121;
+	z-index: 1;
+	background: #e8e8e8;
+	position: relative;
+	font-weight: 1000;
+	font-size: 17px;
+	-webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+	box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+	transition: all 250ms;
+	overflow: hidden;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 0;
+		border-radius: 15px;
+		background-color: $naranja-oscuro;
+		z-index: -1;
+		-webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+		box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+		transition: all 250ms;
+	}
+	&:hover {
+		color: #e8e8e8;
+		&::before {
+			width: 100%;
+		}
+	}
+}
+
+.boton__principal{
+	a{
+		text-decoration: none;
+		color: $naranja-oscuro;
+	}
+
+	&:hover{
+		a{
+			color: white;
+		}
+	}
+}
+
+.proximosShows {
+	height: 1000px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-right: 200px;
+}
+
+.proximosShowsGeneral {
+ 	display: block;
+	text-align: center;
+	width: 700px;
+}
+
+.shows__titulo {
+	margin-bottom: 80px;
+	margin-top: 0;
+}
+
+.shows__titulo--item {
+	display: inline-block;
+	padding-right: 20px;
+	padding-left: 20px;
+	padding-top: 0;
+	padding-bottom: 5px;
+	background-color: $naranja-oscuro;
+	font-size: 30px;
+	font-style: italic;
+	letter-spacing: 10px;
+	color: white;
+	text-align: center;
+	margin-bottom: 0;
+}
+
+.shows__item {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 10px 0;
+}
+
+.shows__fechas--item {
+	padding-top: 10px;
+	padding-bottom: 25px;
+	padding-right: 25px;
+	padding-left: 25px;
+	background-color: $naranja-oscuro;
+	text-align: center;
+	font-style: italic;
+	color: white;
+	display: inline-block;
+	margin-bottom: 0;
+	width: 90px;
+	span {
+		display: block;
+		font-size: 30px;
+		line-height: 20px;
+	}
+}
+
+.shows__ciudad--item {
+	letter-spacing: 1px;
+	font-style: italic;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 0;
+	text-align: center;
+}
+
+.shows__tickets--item {
+	margin-bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 18px;
+	a {
+		text-decoration: none;
+		font-style: italic;
+		color: $naranja-oscuro;
+	}
+}
+
+.proximosShows__links--VerTodos {
+	display: inline-block;
+	border: solid 1px black;
+	color: #1f1f1e;
+	padding: 5px 10px;
+	margin-top: 30px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 12px;
+	&:hover {
+		transition: 1s;
+		background-color: black;
+		color: white;
+	}
+}
+
+@import "layout/footer";
+
+@import "pages_scss/musica";
+@import "pages_scss/tour";
+@import "pages_scss/biografia";
+@import "pages_scss/galeria";
+@import "pages_scss/contacto";
+
+@import "layout/mediaQueries";

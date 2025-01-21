@@ -1,0 +1,27 @@
+.footer{
+	background-color: black;
+}
+
+.contenedor__footer{
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+	line-height: 60px;
+}
+
+.footer__iconos{
+	margin-right: 20px;
+}
+
+.footer__iconos--item{
+	display: inline-block;
+	margin: 0 5px;
+}
+
+.footer__titulo--item {
+	display: inline-block;
+	color: white;
+	font-size: 17px;
+	text-transform: uppercase;
+	margin: 0 20px;
+}

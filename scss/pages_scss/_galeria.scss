@@ -1,0 +1,217 @@
+.main{
+	background-image: $fondo-degradado;
+}
+
+#fotos {
+	padding-bottom: 100px;
+}
+
+.galeria__titulo {
+	text-align: center;
+	margin: 40px 0;
+	font-size: 40px;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-style: italic;
+}
+
+.galeria__fotos {
+	display: flex;
+	justify-content: center;
+	padding: 0;
+	margin: 0;
+}
+
+.fotos__item {
+	transition: transform 0.5s;
+	&:hover {
+		transform: scale(1.5);
+	}
+}
+
+#videos {
+	padding: 0;
+}
+
+.contenedor-videoGeneral {
+	background-color: $gris-claro-dos;
+}
+.container{
+	padding: 0;
+}
+.videoGeneral {
+	display: flex;
+	justify-content: center;
+	padding: 80px 10px;
+}
+.videoGeneral__titulos {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: left;
+	margin-left: 20px;
+}
+.videoGeneral__fecha {
+	text-transform: uppercase;
+	color: black;
+	font-weight: 400;
+	font-size: 22px;
+}
+.videoGeneral__nombre {
+	font-weight: bold;
+	font-size: 30px;
+}
+.contenedor-videoParticular {
+	margin: 40px 0;
+}
+.videoParticular__Alinear {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	row-gap: 20px;
+}
+.videoParticular__item {
+	display: flex;
+	justify-content: center;
+	cursor: pointer;
+	img {
+		width: 300px;
+		height: 171px;
+	}
+}
+.videoFondo {
+	width: 300px;
+	height: 171px;
+	&:hover {
+		.videoFondo_titulosKeloke {
+			display: flex;
+			transition: 5s;
+		}
+	}
+}
+.fondoUno {
+	width: 300px;
+	height: 171px;
+	background-image: url("/images/Videos\ Skate.jpg");
+	background-size: cover;
+}
+.fondoDos {
+	width: 300px;
+	height: 171px;
+	background-image: url("/images/Videos\ Leave\ the\ door\ open.jpg");
+	background-size: cover;
+}
+.fondoTres {
+	width: 300px;
+	height: 171px;
+	background-image: url("/images/Videos\ Finesse.webp");
+	background-size: cover;
+}
+.fondoCuatro {
+	width: 300px;
+	height: 171px;
+	background-image: url("/images/Videos\ 24k\ Magic.jpg");
+	background-size: cover;
+}
+.fondoCinco {
+	width: 300px;
+	height: 171px;
+	background-image: url("/images/Videos\ Thats\ What\ I\ Like.jpg");
+	background-size: cover;
+}
+.fondoSeis {
+	width: 300px;
+	height: 171px;
+	background-image: url("/images/Videos\ Versace\ on\ the\ floor.jpg");
+	background-size: cover;
+}
+.fondoSiete {
+	width: 300px;
+	height: 171px;
+	background-image: url("/images/Videos\ Uptown\ Funk.jpg");
+	background-size: cover;
+}
+.fondoOcho {
+	width: 300px;
+	height: 171px;
+	background-image: url("/images/Videos\ Locked\ Out\ Of\ Heaven.jpg");
+	background-size: cover;
+}
+.fondoNueve {
+	width: 300px;
+	height: 171px;
+	background-image: url("/images/Videos\ Treasure.jpg");
+	background-size: cover;
+}
+.fondoDiez {
+	width: 300px;
+	height: 171px;
+	background-image: url("/images/Videos\ When\ i\ was\ your\ men.jpg");
+	background-size: cover;
+}
+.fondoOnce {
+	width: 300px;
+	height: 171px;
+	background-image: url("/images/Videos\ The\ Lazy\ Song.jpg");
+	background-size: cover;
+}
+.fondoDoce {
+	width: 300px;
+	height: 171px;
+	background-image: url("/images/Videos\ Just\ The\ Way\ you\ are.jpg");
+	background-size: cover;
+}
+.videoFondo_titulosKeloke {
+	width: 300px;
+	height: 171px;
+	background-color: black;
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	opacity: .8;
+	h4 {
+		display: inline-block;
+		margin: 10px 0;
+	}
+}
+.videoFondo__titulo {
+	color: white;
+	font-weight: bold;
+	font-size: 15px;
+}
+.botonVideos {
+	padding: 15px 25px;
+	border: solid 1px black;
+	border-radius: 15px;
+	color: #212121;
+	z-index: 1;
+	background: #e8e8e8;
+	position: relative;
+	font-weight: 1000;
+	font-size: 17px;
+	-webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+	box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+	transition: all 250ms;
+	overflow: hidden;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 0;
+		border-radius: 15px;
+		background-color: #212121;
+		z-index: -1;
+		-webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+		box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+		transition: all 250ms;
+	}
+	&:hover {
+		color: #e8e8e8;
+		&::before {
+			width: 100%;
+		}
+	}
+}

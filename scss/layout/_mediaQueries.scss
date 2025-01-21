@@ -1,0 +1,250 @@
+@media (max-width: 1450px) {
+    .proximosShows {
+        padding-right: 100px;
+    }
+
+    .musica__albums {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .musica__singles {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+    .albumEspecifico {
+        text-align: center;
+    }
+    .imagenes--item {
+        height: 500px;
+    }
+
+    .videoParticular__Alinear{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 1100px) {
+    .videoGeneral{
+        flex-direction: column;
+        padding: 40px 0;
+    }
+
+    .videoGeneral-item{
+        margin: 0;
+    }
+
+    .footer{
+        text-align: center;
+    }
+
+    .footer__iconos{
+        margin-right: 0;
+    }
+
+    .contenedor__footer{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1000px) {
+    .videoParticular__Alinear{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .videoGeneral__titulos{
+        align-items: center;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 992px) {
+    .proximosShows {
+        padding-right: 10px;
+    }
+    
+    .ultimaMusica {
+        height: 700px;
+    }
+    .proximosShows {
+        height: 700px;
+    }
+
+    .navegacionCentrar {
+        margin-top: 5px;
+        justify-content: left;
+    }
+    
+    .navbar-brand {
+        justify-content: left;
+        margin-right: 0;
+    }
+    .navPrincipal {
+        padding: 0 20px;
+    }
+
+    .ultimaMusica {
+		width: 100%;
+	}
+
+	.proximosShows {
+		width: 100%;
+	}
+    .imagenes--item {
+        height: 300px;
+    }
+    .fotos__item {
+        transition: none;
+        &:hover {
+            transform: none;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .biografia__parrafo {
+        margin: 0 20px;
+    }
+    .musica__albums {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .musica__singles {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .albumEspecifico {
+        text-align: center;
+    }
+    .formularioEdicion {
+        grid-template-rows: repeat(3, 1fr);
+        column-gap: 0;
+    }
+    .formulario__mensaje {
+        grid-column: 1/3;
+        grid-row: 3/4;
+    }
+    .formulario__email {
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+    .formulario__nombre {
+        grid-column: 1/3;
+        grid-row: 2/3;
+    }
+
+    .biografia-texto {
+        margin: 0 15px;
+    }
+
+    .videoParticular__Alinear{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .videoGeneral__fecha{
+        font-size: 15px;
+    }
+
+    .videoGeneral__nombre{
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    .proximosShows__tour {
+        padding: 20px;
+    }
+    
+}
+
+@media (max-width: 540px) {
+    .navbar-brand {
+        img{
+            width: 250px;
+            height: 40px;
+        }
+    }
+    .ultimaMusica__imagen {
+        height: 334px;
+        width: 334px;
+    }
+
+    .ultimaMusica__titulos--nombre {
+        font-size: 20px;
+    }
+
+    .shows__titulo--item {
+        font-size: 22px;
+    }
+
+    .shows__item {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    .shows__ciudad--item {
+        margin-top: 5px;
+        margin-bottom: 15px;
+        width: 300px;
+    }
+    .proximosShows {
+        height: 1200px;
+    }
+    .proximosShows__tour {
+        height: 2000px;
+    }
+    .imagenes--item {
+        height: 350px;
+        margin-bottom: 20px;
+    }
+
+    .albumAnimado--Index{
+        width: 330px;
+        height: 330px;
+
+        img{
+            width: 330px;
+            height: 330px;   
+        }
+    }
+
+    .back--Index{
+        h3 {
+            font-size: 20px;
+        }
+    }
+
+    .formularioGeneral {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .biografia__parrafo {
+        text-align: justify;
+        font-size: 15px;
+        margin: 0;
+    }
+    .biografia__parrafo {
+        text-align: left;
+        font-size: 17px;
+    }
+
+    .formularioGeneral {
+        margin: 50px;
+    }
+
+    .form-control{
+        font-size: small;
+    }
+
+    .footer__titulo--item {
+        font-size: 14px;
+    }
+}

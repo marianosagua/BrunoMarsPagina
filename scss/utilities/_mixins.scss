@@ -1,0 +1,18 @@
+@mixin formatter($ancho, $alto) {
+	width: $ancho;
+	height: $alto;
+}
+
+@mixin albumBackStyles ($fondo, $rotacion) {
+	background: $fondo;
+	transform: $rotacion;
+}
+
+@mixin albumBackStyles__titulos ($margen, $fuenteTamanio, $fuenteWeight, $fuenteFamilia, $colorFuente, $estiloFuente) {
+	margin: $margen;
+	font-size: $fuenteTamanio;
+	font-weight: $fuenteWeight;
+	font-family: $fuenteFamilia;
+	color: $colorFuente;
+	font-style: $estiloFuente;
+}

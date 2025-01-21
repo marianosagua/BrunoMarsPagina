@@ -1,0 +1,33 @@
+.main__biografia {
+	background-image: $fondo-degradado;
+}
+.biografia {
+	margin-top: 50px;
+	margin-bottom: 80px;
+	margin-left: 0;
+	margin-right: 0;
+}
+.biografia__imagenes {
+	display: flex;
+	justify-content: center;
+}
+.biografia__titulo {
+	display: block;
+	text-align: center;
+	margin: 40px 0;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: black;
+}
+.biografia-texto {
+	display: flex;
+	justify-content: center;
+	margin: 0 100px;
+}
+.biografia__parrafo {
+	text-align: justify;
+	font-size: 20px;
+	color: black;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	margin-bottom: 0;
+}
