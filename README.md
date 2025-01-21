@@ -52,11 +52,3 @@ Si deseas contribuir a este proyecto, por favor sigue los siguientes pasos:
 3. Realiza tus cambios y haz commit (`git commit -am 'Añadir nueva funcionalidad'`).
 4. Sube tus cambios a tu fork (`git push origin feature/nueva-funcionalidad`).
 5. Abre un Pull Request.
-
-## Licencia
-
-Este proyecto está licenciado bajo la Licencia ISC.
-
-## Contacto
-
-Para cualquier consulta o reporte de errores, por favor abre un issue en [GitHub](https://github.com/MarianoSagua/BrunoMarsPagina/issues).
