@@ -1,54 +1,47 @@
-# Bruno Mars Página
+# Bruno Mars - Página Web
 
-Este proyecto es una página web dedicada a Bruno Mars. A continuación, se detallan las instrucciones para configurar y ejecutar el proyecto.
+## Descripción
 
-## Requisitos
+Este proyecto es una página web dedicada al artista Bruno Mars, desarrollada con HTML, CSS y SASS.
 
+## Tecnologías Utilizadas
+
+- HTML5
+- CSS3
+- SASS/SCSS
 - Node.js
-- npm (Node Package Manager)
+- Node-sass
+- Nodemon
 
 ## Instalación
 
-1. Clona el repositorio:
-    ```sh
-    git clone https://github.com/MarianoSagua/BrunoMarsPagina.git
-    ```
-2. Navega al directorio del proyecto:
-    ```sh
-    cd BrunoMarsPagina
-    ```
-3. Instala las dependencias:
-    ```sh
-    npm install
-    ```
+1. Clonar el repositorio:
 
-## Scripts de npm
+```bash
+git clone https://github.com/MarianoSagua/BrunoMarsPagina.git
+```
 
-- `test`: Ejecuta el script de prueba (actualmente no especificado).
-    ```sh
-    npm run test
-    ```
-- `build-css`: Compila los archivos SCSS a CSS.
-    ```sh
-    npm run build-css
-    ```
-- `watch-css`: Observa los cambios en los archivos SCSS y ejecuta `build-css` automáticamente.
-    ```sh
-    npm run watch-css
-    ```
+2. Instalar dependencias:
+
+```bash
+npm install
+```
+
+## Scripts Disponibles
+
+- `npm run build-css`: Compila los archivos SCSS a CSS
+- `npm run watch-css`: Observa cambios en archivos SCSS y compila automáticamente
 
 ## Estructura del Proyecto
 
-- `scss/`: Directorio que contiene los archivos SCSS.
-- `css/`: Directorio donde se generarán los archivos CSS compilados.
-- `index.js`: Archivo principal del proyecto.
+- `scss/`: Archivos fuente de SASS
+- `css/`: Archivos CSS compilados
+- `index.js`: Archivo principal de la aplicación
 
-## Contribuir
+## Autor
 
-Si deseas contribuir a este proyecto, por favor sigue los siguientes pasos:
+Mariano Sagua
 
-1. Haz un fork del repositorio.
-2. Crea una nueva rama (`git checkout -b feature/nueva-funcionalidad`).
-3. Realiza tus cambios y haz commit (`git commit -am 'Añadir nueva funcionalidad'`).
-4. Sube tus cambios a tu fork (`git push origin feature/nueva-funcionalidad`).
-5. Abre un Pull Request.
+## Repositorio
+
+[GitHub - BrunoMarsPagina](https://github.com/MarianoSagua/BrunoMarsPagina)
